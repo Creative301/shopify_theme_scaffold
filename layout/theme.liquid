@@ -10,10 +10,11 @@
   </head>
   <body>
   {% comment %} Source code: https://github.com/gavinballard/defguide-theme {% endcomment %}
-  {%- section 'header' -%}
+    {%- section 'header' -%}
     {{ content_for_layout }}
+    {%- section 'footer' -%}
     {{- 'jquery-3.3.1.min.js' | asset_url | script_tag -}}
     {{- 'bootstrap.bundle.min.js' | asset_url | script_tag -}}
-    {{- 'script.js' | asset_url | script_tag -}}
+    {{- 'theme.js' | asset_url | script_tag -}}
   </body>
 </html>
