@@ -8,7 +8,7 @@
     {{- 'bootstrap.min.css' | asset_url | stylesheet_tag -}}
     {{ 'styles.css' | asset_url | stylesheet_tag }}
   </head>
-  <body>
+  <body class="bg-faded no-js">
   {% comment %} Source code: https://github.com/gavinballard/defguide-theme {% endcomment %}
     {%- section 'header' -%}
     {{ content_for_layout }}
@@ -16,6 +16,7 @@
     {{- 'jquery-3.3.1.min.js' | asset_url | script_tag -}}
     {{- 'bootstrap.bundle.min.js' | asset_url | script_tag -}}
     {{- 'theme.js' | asset_url | script_tag -}}
+    {{- captured_js -}}
   </body>
 </html>
 
